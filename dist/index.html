@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mini vue</title>
+  </head>
+  <body>
+    <div id="app" class="wrapper" style="color: orange">
+      <h1 class="title" style="color: red; font-size: 40px">
+        标题 {{ title }}
+      </h1>
+      <span>这里是 {{ message }} 文本 {{ author.name }} 末尾</span>
+      <p>纯文本</p>
+    </div>
+
+    <script src="./Minivue.js"></script>
+    <script>
+      var vm = new Minivue({
+        el: '#app',
+        data() {
+          return {
+            title: 'minivue',
+            message: '实现简单的vue响应式',
+            brief: '小小的vue实现室',
+            author: { name: 'jsdawn', age: 18 },
+            hobby: ['eat', 'drink', { name: 'dance', num: 2 }],
+          };
+        },
+      });
+
+      setTimeout(() => {
+        vm.title = 'minivue2';
+        vm._update(vm._render());
+      }, 2000);
+    </script>
+  </body>
+</html>

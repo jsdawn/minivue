@@ -1,0 +1,23 @@
+{
+  "name": "minivue",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "minivue.js",
+  "scripts": {
+    "dev": "rollup -cw"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.18.10",
+    "@babel/preset-env": "^7.18.10",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "rollup": "^2.78.0"
+  },
+  "dependencies": {
+    "htmlparser2": "^8.0.1"
+  }
+}
